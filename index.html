@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://totally-not.spyware.lol/ -->
+<html lang="en" manifest="manifest.appcache"><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>⁢</title>
+
+<!-- UI Properties -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="./css/all.css">
+<!-- iOS App Properties -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="./img/ios-icon.png">
+<script>
+window.onerror = function(ev)
+{
+    alert('Uncaught error: ' + ev);
+};
+</script>
+<!-- script type="text/javascript">navigator.__defineGetter__('userAgent', function () { return 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1'; });</script -->
+<script src="./js/all.js"></script>
+<script src="./js/pwn.js"></script>
+</head><body class="crazycolors">
+    <header class="block">
+        <div class="time">iOS 10.x</div>
+        <div class="date">JailbreakMe - compatible with Meridian</div>
+    </header>
+    <div id="main">
+        <img id="logo" src="./img/earth.png" alt="logo">
+        <div id="notice"></div>
+    </div>
+    <div id="slider">
+        <div id="well">
+            <div id="thumbtack">
+                <img class="arrow" src="./img/arrow.svg" alt="arrow">
+            </div>
+            <div id="hint">
+                <span>slide to jailbreak</span>
+            </div>
+        </div>
+    </div>
